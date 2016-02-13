@@ -1,0 +1,245 @@
+
+
+//PAGE NAV ROW
+
+ul.page-nav.narrow-red{
+	background: #F24922;
+	li{
+	background: #F24922;
+	border-right: 1px solid #b03418;
+	border-left: 1px solid #f17456;
+	}
+	}	
+
+ul.page-nav {
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  background-color: #09435b;
+  margin-bottom: 0;
+  padding: 0;
+
+
+  li {
+    display: table;
+	width: 100%;
+    margin: 0;
+    text-indent: 0;
+	text-align: center;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+	padding:0;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 18px;
+	vertical-align: middle;
+	//padding: 10px 0;
+	border: 1px solid #042633;
+	border-left:1px solid #0B5E80;
+	float: left;
+    // IE8-9 hack for event handling
+    //
+    // Internet Explorer 8-9 does not support clicks on elements without a set
+    // `background-color`. We cannot use `filter` since that's not viewed as a
+    // background color by the browser. Thus, a hack is needed.
+    //
+    // For IE8, we set solid black as it doesn't support `rgba()`. For IE9, we
+    // set alpha transparency for the best results possible.
+    background-color: #000 \9; // IE8
+    background-color: rgba(0,0,0,0); // IE9
+	background-color: #09435b;
+	a {
+		display: table-cell;
+		color: #fff;
+		text-decoration: none;
+		//padding: 10px 0;
+		height: 100%;
+		width: 100%;		
+		vertical-align: middle;
+		
+	}
+  }
+  .active, :hover {
+    margin: 0;
+    background: url(/images/carousel_indicator_active_bkg.png) top center;
+	}
+	
+	
+}	
+
+
+	@media (min-width: @screen-sm-min) {
+	ul.page-nav {
+  			width: 100%;
+  			list-style: none;
+  			text-align: center;
+  			background-color: #09435b;
+  			margin-bottom: 0;
+			li {
+			  //display: table;
+			  width:  24%;
+			  height: 100px;
+			  margin: 0;
+			  text-indent: 0;
+			  text-align: center;
+			  border: none;
+			  border-radius: 0;
+			  cursor: pointer;
+			  padding:0 10px;
+			  color: #fff;
+			  text-transform: uppercase;
+			  font-size: 16px;
+			  vertical-align: middle;
+			  padding-top: 0;
+			  border-right: 1px solid #042633;
+			  border-left:1px solid #0B5E80;
+			  	a{
+					//padding-top: 30px;
+					}
+			  
+			  }
+			
+		}	  	
+		ul.page-nav.narrow, ul.page-nav.narrow-red {
+			/*
+			li:first-child{
+				width: 60%;
+				text-align: left;
+				//padding-left: 20px;
+				//padding-top: 15px;
+				cursor: auto;
+				}
+				*/
+			li{
+				height: 55px;
+				width: 19%;
+				a{
+					//padding-top: 15px;
+				}
+			}	
+		}
+	
+}
+
+
+//
+// EMS Accordion
+// --------------------------------------------------
+
+[class^="accordion-"], [class*=" accordion-"] {
+	width: 100%;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+	-webkit-transform: translate(0);
+}
+
+.squeezhead {
+	padding: 6px;
+	position: relative;
+	cursor: pointer;
+}
+.squeezhead p {
+	font-weight: bold;
+	margin: 5px 15px;
+}
+.squeezecnt {
+}
+.squeezecnt p {
+	margin: 0;
+}
+
+.squeezhead.accord-sty.accordion_open{
+	background-image: url(/images/icon_collapse.png)
+	}
+
+.squeezhead.accord-sty {
+	background-color: #09435b;
+	border: 1px solid #042633;
+	border-radius: 0;
+	color: #fff;
+	font-size: 16px;
+	margin: 0;
+	padding: 12px 35px 12px 30px;
+	text-align: left;
+	text-transform: uppercase;
+	background: url(/images/icon_expand.png) right center no-repeat #09435b;
+}
+
+.page-accordion.red{
+.squeezhead.accord-sty {
+	background-color: #F24922 ;
+	}
+}
+@media (min-width: 768px) { 
+	h2.squeezhead.accord-sty {
+		display: none;
+	}
+	.squeezecnt {
+		display: block !important;
+	}
+	.job-box .job-wrapper.squeezecnt {
+		display: none;
+	}
+}
+
+
+//scroll up
+
+
+
+
+//Back to top button
+#back-top {
+	position: fixed;
+	bottom: 10px;
+	right: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+		@media (min-width: 768px) { 
+			margin-right: 12%;
+			right: 10px;				
+		}	
+	
+}
+#back-top a {
+	width: 93px;
+	display: block;
+	text-align: center;
+	font: 0px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #bbb;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover {
+	color: #000;
+}
+/* arrow icon (span tag) */
+#back-top span {
+	width: 53px;
+	height: 58px;	
+	display: block;
+	background: transparent url(/images/arrow_up_scroll.png) no-repeat center center;
+	/* rounded corners */
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+	opacity: 0.5;
+		@media (min-width: 768px) { 
+			width: 93px;
+			height: 98px;
+		}
+}
+#back-top a:hover span {
+	background-color: #777;
+	opacity: 1;
+}
